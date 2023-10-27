@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "74a7daa6-d361-4ab0-8016-2018af39785c",
+		"name": "OrderOnline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8072928"
+	},
+	"item": [
+		{
+			"name": "Ability",
+			"item": [
+				{
+					"name": "Get Abilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/abilities/index",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"abilities",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load New Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/abilities/loadNewData",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"abilities",
+								"loadNewData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Favorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/abilities/listFavorite",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"abilities",
+								"listFavorite"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Get Pokemons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/pokemons/index",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pokemons",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load New Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/pokemons/loadNewData",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pokemons",
+								"loadNewData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/pokemons/detail/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pokemons",
+								"detail",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorite",
+			"item": [
+				{
+					"name": "Get Favorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/favorites/index",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorites",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Favorites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"abilities\": [\r\n            {\r\n                \"ability\": {\r\n                    \"name\": \"overgrow\",\r\n                    \"url\": \"https://pokeapi.co/api/v2/ability/65/\"\r\n                },\r\n                \"is_hidden\": false,\r\n                \"slot\": 1\r\n            },\r\n            {\r\n                \"ability\": {\r\n                    \"name\": \"chlorophyll\",\r\n                    \"url\": \"https://pokeapi.co/api/v2/ability/34/\"\r\n                },\r\n                \"is_hidden\": true,\r\n                \"slot\": 3\r\n            }\r\n        ],\r\n        \"id\": 1,\r\n        \"name\": \"bulbasaur\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/favorites/store",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorites",
+								"store"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
